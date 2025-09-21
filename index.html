@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.js"></script>
+  </head>
+  <body>
+    <div class="title-bar">
+      <span class="animate-charcter" style="font-weight:bold; margin-left:16px; margin-right:24px;">mermaidjs</span>
+      <div class="menu-root" id="menu-root">
+        <div style="position: relative;">
+          <button class="menu-btn" id="editor-btn">Editor</button>
+          <div class="menu-dropdown" id="editor-dropdown">
+            <button id="show-editor-btn">Show Editor</button>
+            <button id="hide-editor-btn">Hide Editor</button>
+            <button id="save-svg-btn">Save</button>
+          </div>
+        </div>
+        <button class="menu-btn" id="render-btn" style="margin-left: 8px;">Render</button>
+      </div>
+    </div>
+    <div class="split-container">
+      <div class="panel" id="panel-input" style="flex-basis: 50%; flex-shrink: 0; flex-grow: 0;">
+        <textarea id="mermaid-input" rows="6">graph LR
+    A --- B
+    B-->C[mermaidjs]
+    B-->D(fa:fa-spinner);</textarea>
+      </div>
+      <div class="divider" id="divider"></div>
+      <div class="panel" id="panel-render" style="flex: 1 1 0%;">
+        <div id="mermaid-render"></div>
+      </div>
+    </div>
+    
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    </script>
+        
+  </body>
+</html>
